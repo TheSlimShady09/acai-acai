@@ -1,0 +1,320 @@
+/* Premium & Elegant Community Page Styling */
+
+.community-page-body {
+  background: var(--color-dolphin) !important;
+  color: var(--color-linen) !important;
+  overflow-x: hidden;
+}
+
+.community-page {
+  background: var(--color-dolphin) !important;
+  padding-bottom: 20vh;
+}
+
+/* Header Section */
+.community-header-section {
+  padding: 22vh 0 6vh 0;
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.community-tag-main {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-amethyst);
+  letter-spacing: 0.15em;
+  display: inline-block;
+  margin-bottom: 1.2rem;
+}
+
+.community-title {
+  font-family: var(--font-brazil); /* High-impact Archivo Black brand display font */
+  font-size: clamp(3rem, 7vw, 4.5rem);
+  font-weight: 900;
+  color: var(--color-linen);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.community-subtitle {
+  color: var(--color-text-muted);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-top: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+/* Masonry Grid Layout */
+.community-gallery-container {
+  width: 100%;
+}
+
+.community-masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 3rem;
+  width: 100%;
+}
+
+/* Slot Card Base Styles */
+.gallery-slot-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 36px;
+  background: rgba(253, 241, 226, 0.02);
+  border: 1px solid rgba(253, 241, 226, 0.05);
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  position: relative;
+  width: 100%;
+}
+
+/* Dynamic Aspect Ratios for Grid Interest */
+.slot-square {
+  aspect-ratio: 1;
+}
+
+.slot-vertical {
+  aspect-ratio: 0.75;
+}
+
+.slot-horizontal {
+  aspect-ratio: 1.35;
+}
+
+/* Card Hover Elevate and Highlight Glow */
+.gallery-slot-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(253, 241, 226, 0.12);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(253, 241, 226, 0.05);
+}
+
+/* Transparent Slot Visual Container */
+.slot-visual-placeholder {
+  flex-grow: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(253, 241, 226, 0.01);
+  border-bottom: 1px solid rgba(253, 241, 226, 0.03);
+  overflow: hidden;
+}
+
+/* Soft Spotlight Glow Effect */
+.slot-glow-effect {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  background: var(--color-amethyst);
+  filter: blur(80px);
+  border-radius: 50%;
+  opacity: 0.03;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  pointer-events: none;
+}
+
+.gallery-slot-card:hover .slot-glow-effect {
+  opacity: 0.08;
+  transform: scale(1.15);
+}
+
+/* Instruction Text Panel */
+.slot-instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.8rem;
+  z-index: 10;
+  padding: 2.2rem;
+}
+
+.slot-icon {
+  font-size: 2.4rem;
+  filter: grayscale(1) opacity(0.3);
+  transition: all 0.4s ease;
+}
+
+.gallery-slot-card:hover .slot-icon {
+  filter: grayscale(0) opacity(0.85);
+  transform: scale(1.1);
+}
+
+.slot-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  color: var(--color-linen);
+  opacity: 0.45;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all 0.4s ease;
+}
+
+.gallery-slot-card:hover .slot-label {
+  opacity: 0.9;
+  color: var(--color-linen);
+}
+
+.slot-code-hint {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  opacity: 0.35;
+  line-height: 1.5;
+  transition: all 0.4s ease;
+}
+
+.slot-code-hint code {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  color: var(--color-amethyst);
+  display: inline-block;
+  margin-top: 0.4rem;
+  font-family: Consolas, monospace;
+}
+
+.gallery-slot-card:hover .slot-code-hint {
+  opacity: 0.75;
+}
+
+/* Meta Info Panel */
+.slot-info-panel {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.slot-meta {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.slot-number {
+  color: var(--color-amethyst);
+}
+
+.slot-tag {
+  color: rgba(253, 241, 226, 0.45);
+}
+
+.slot-title {
+  font-family: var(--font-brazil); /* Archivo Black for consistent titles */
+  font-size: 1.1rem;
+  color: var(--color-linen);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0.3rem 0 0 0;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Guide Section */
+.community-guide-section {
+  margin-top: 10vh;
+  width: 100%;
+}
+
+.guide-card {
+  padding: 4rem;
+  border-radius: 36px;
+  background: rgba(253, 241, 226, 0.02);
+  border: 1px solid rgba(253, 241, 226, 0.06);
+}
+
+.guide-card h3 {
+  font-family: var(--font-brazil);
+  font-size: 1.6rem;
+  color: var(--color-linen);
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.guide-card p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.guide-code-list {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-bottom: 1.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.guide-code-list code {
+  font-family: Consolas, monospace;
+  font-size: 0.95rem;
+  color: var(--color-amethyst);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+}
+
+.guide-note {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.98rem !important;
+  color: var(--color-amethyst) !important;
+  font-weight: 500;
+  margin-bottom: 0 !important;
+}
+
+/* Responsiveness overrides */
+@media (max-width: 900px) {
+  .community-header-section {
+    padding: 16vh 1.5rem 5vh 1.5rem;
+  }
+
+  .community-title {
+    font-size: 2.8rem;
+  }
+
+  .community-masonry-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .slot-vertical, .slot-horizontal {
+    aspect-ratio: 1; /* uniform grids on smaller screen viewports */
+  }
+
+  .guide-card {
+    padding: 2.5rem;
+    border-radius: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .community-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Premium media hover zoom effect */
+.gallery-slot-card:hover .slot-media-img {
+  transform: scale(1.06);
+}
