@@ -33,7 +33,15 @@ export default function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${!visible ? 'hidden' : ''}`}>
       <div className="container navbar-container">
         <div className="nav-logo">
-          <Link href="/">AÇAÍ CLUB</Link>
+          <Link href="/" className="nav-logo-link">
+            <img
+              src="/logo.png?v=4"
+              alt="Açaí Club Logo"
+              width={600}
+              height={190}
+              className="nav-logo-img"
+            />
+          </Link>
         </div>
 
         {/* Hamburger Menu Icon */}
@@ -58,6 +66,23 @@ export default function Navbar() {
       </div>
 
       <style jsx>{`
+        :global(.nav-logo-img) {
+          height: 250px;
+          width: auto;
+          display: block;
+          transition: transform 0.3s ease;
+        }
+
+        :global(.nav-logo-img:hover) {
+          transform: scale(1.05);
+        }
+
+        @media (max-width: 900px) {
+          :global(.nav-logo-img) {
+            height: 150px;
+          }
+        }
+
         .navbar {
           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
           transform: translateY(0);

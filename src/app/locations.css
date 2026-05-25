@@ -1,6 +1,6 @@
 /* Locations Page */
 .locations-page {
-  padding-top: 120px;
+  padding-top: 350px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,18 +8,20 @@
 
 .locations-layout {
   display: flex;
-  flex: 1;
-  gap: 2rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
   margin-top: 2rem;
-  height: calc(100vh - 200px);
+  flex-wrap: wrap;
 }
 
 .locations-list {
-  width: 400px;
+  width: 100%;
+  max-width: 450px;
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  overflow-y: auto;
+  border-radius: 48px;
   display: flex;
   flex-direction: column;
 }
@@ -52,9 +54,11 @@
 }
 
 .locations-map {
-  flex: 1;
+  width: 100%;
+  max-width: 600px;
+  height: 550px;
   background: radial-gradient(circle at center, #1a1a1a 0%, #050505 100%);
-  border-radius: 20px;
+  border-radius: 48px;
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.05);

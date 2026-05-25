@@ -7,52 +7,46 @@ import '../menu.css';
 
 const acaiCups = [
   {
-    id: 'para-classic',
-    title: 'PARA CLASSIC',
-    image: '/menu/para-classic.png',
-    description: 'Pure organic açaí with organic tapioca pearls and raw sugar cane syrup, served in its most authentic northern form.'
-  },
-  {
-    id: 'amazon',
-    title: 'AMAZON',
+    id: 'create',
+    title: 'MAKE YOUR OWN',
     image: '/menu/amazon.png',
-    description: 'Organic açaí blended with wild guarana, cupuaçu cream, crunchy brazil nuts, and fresh banana slices.'
-  },
-  {
-    id: 'brasilia',
-    title: 'BRASILIA',
-    image: '/menu/brasilia.png',
-    description: 'Organic açaí topped with nutrient-dense hemp seeds, sliced kiwi, fresh strawberries, and almond butter.'
-  },
-  {
-    id: 'buzios',
-    title: 'BUZIOS',
-    image: '/menu/buzios.png',
-    description: 'Organic açaí paired with fresh mango slices, toasted coconut flakes, artisan granola, and a passion fruit drizzle.'
+    description: 'Base açaí + toppings (Extra toppings at additional price)',
+    price: '500 L / 600 L'
   },
   {
     id: 'tancoso',
-    title: 'TANCOSO',
+    title: 'TRANCOSO',
     image: '/menu/tancoso.png',
-    description: 'Organic açaí with ripe raspberries, fresh dragonfruit slices, raw honeycomb, and organic chia seeds.'
+    description: 'Base açaí + powder milk + banana + panda',
+    price: '790 L / 870 L'
+  },
+  {
+    id: 'buzios',
+    title: 'BÚZIOS',
+    image: '/menu/buzios.png',
+    description: 'Base açaí + granola + nutella + strawberry',
+    price: '790 L / 870 L'
+  },
+  {
+    id: 'ipanema',
+    title: 'IPANEMA',
+    image: '/menu/para-classic.png',
+    description: 'Base açaí + Pistache + Mixed Fruits + Granola',
+    price: '790 L / 870 L'
   },
   {
     id: 'recife',
     title: 'RECIFE',
     image: '/menu/recife.png',
-    description: 'Organic açaí layered with sweet condensed milk, fresh strawberries, crunchy granola, and crushed peanuts.'
+    description: 'Base açaí + granola + mango',
+    price: '790 L / 890 L'
   },
   {
-    id: 'sao-paolo',
-    title: 'SAO PAOLO',
-    image: '/menu/sao-paolo.png',
-    description: 'Organic açaí infused with premium whey protein, peanut butter, artisan granola, fresh banana, and cocoa nibs.'
-  },
-  {
-    id: 'create',
-    title: 'CREATE',
-    image: '/menu/create.jpeg',
-    description: 'Our signature organic açaí base ready to be customized with your choice of premium ingredients.'
+    id: 'brasilia',
+    title: 'BRASÍLIA',
+    image: '/menu/brasilia.png',
+    description: 'Base açaí + granola + peanut butter + banana',
+    price: 'Medium  720 L\nLarge  790 L'
   }
 ];
 
@@ -61,13 +55,29 @@ const smoothies = [
     id: 'tiara',
     title: 'TIARA',
     image: '/menu/tiara.png',
-    description: 'Organic açaí swirled with Greek yogurt, wild blueberries, fresh blackberries, and finished with edible gold flakes.'
+    description: 'Açaí + milk + banana',
+    price: '500 L'
   },
   {
     id: 'fortaleza',
     title: 'FORTALEZA',
-    image: '/menu/fortaleza.jpg.jpeg',
-    description: 'Organic açaí served with sweet golden pineapple, roasted cashew nuts, shredded coconut, and fresh mint.'
+    image: '/menu/tiara.png',
+    description: 'Açaí + strawberry + milk',
+    price: '500 L'
+  },
+  {
+    id: 'the-acai-club',
+    title: 'THE AÇAÍ CLUB',
+    image: '/menu/tiara.png',
+    description: 'Açaí + banana + panda + strawberry + milk',
+    price: '750 L'
+  },
+  {
+    id: 'create-smoothie',
+    title: 'CREATE YOUR OWN...',
+    image: '/menu/tiara.png',
+    description: 'Base + milk (+ toppings extra price)',
+    price: '400 L'
   }
 ];
 
@@ -134,7 +144,8 @@ export default function MenuPage() {
               </div>
               <div className="info-minimal">
                 <h2 className="item-title-minimal">{item.title}</h2>
-                <p className="item-description-minimal">{item.description}</p>
+                <p className="item-description-minimal" style={{ whiteSpace: 'pre-line' }}>{item.description}</p>
+                <p className="item-price-minimal" style={{ whiteSpace: 'pre-line' }}>{item.price}</p>
               </div>
             </div>
           ))}
@@ -158,7 +169,8 @@ export default function MenuPage() {
               </div>
               <div className="info-minimal">
                 <h2 className="item-title-minimal">{item.title}</h2>
-                <p className="item-description-minimal">{item.description}</p>
+                <p className="item-description-minimal" style={{ whiteSpace: 'pre-line' }}>{item.description}</p>
+                {item.price && <p className="item-price-minimal" style={{ whiteSpace: 'pre-line' }}>{item.price}</p>}
               </div>
             </div>
           ))}

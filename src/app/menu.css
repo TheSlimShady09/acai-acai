@@ -178,6 +178,18 @@
   transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
+/* Pricing - Matches the overall aesthetic and typography */
+.item-price-minimal {
+  font-family: var(--font-brazil); /* High-impact brand display font */
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: var(--color-linen);
+  margin-top: 0.8rem;
+  letter-spacing: 0.04em;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15); /* Keep premium shadow */
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
 /* Glow description slightly on hover */
 .menu-item-minimal:hover .item-description-minimal {
   color: var(--color-linen);

@@ -62,7 +62,7 @@ export default function LocationsPage() {
 
         <div className="locations-map" style={{ borderRadius: '48px', overflow: 'hidden', minHeight: '500px', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1d2995.918942261!2d19.8166666!3d41.3216666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350310000000000%3A0x0000000000000000!2sBlloku%2C+Tirana!5e0!3m2!1sen!2sal!4v1683471000000!5m2!1sen!2sal" 
+            src="https://maps.google.com/maps?q=Rruga%20Ibrahim%20Rugova,%20Tirana,%20Albania&t=&z=15&ie=UTF8&iwloc=&output=embed" 
             width="100%" 
             height="100%" 
             style={{ border: 0, filter: 'invert(90%) hue-rotate(180deg) brightness(0.8)' }} 
